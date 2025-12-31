@@ -1,89 +1,131 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Github, BarChart3, Users, Phone, Pizza } from "lucide-react";
-import { motion } from "framer-motion";
+## Kajal Prajapati  
+### Data Analyst | Power BI Developer | Business Intelligence
 
-export default function Portfolio() {
-  const projects = [
-    {
-      title: "Customer Retention Analysis",
-      desc: "Interactive Power BI dashboard analyzing churn drivers and customer behavior.",
-      icon: <BarChart3 size={28} />,
-      link: "https://github.com/kajalprajapati-art/Customer-Rentention",
-      tags: ["Power BI", "DAX", "Churn Analysis", "KPIs"],
-    },
-    {
-      title: "Diversity & Inclusion Dashboard",
-      desc: "HR analytics dashboard measuring diversity, promotions, and workforce equity.",
-      icon: <Users size={28} />,
-      link: "https://github.com/kajalprajapati-art/Diversity-and-inclusion-Dashboard",
-      tags: ["HR Analytics", "Power BI", "People Analytics"],
-    },
-    {
-      title: "Call Centre Analytics",
-      desc: "Performance tracking of agents, calls, and customer satisfaction metrics.",
-      icon: <Phone size={28} />,
-      link: "https://github.com/kajalprajapati-art/Call-Centre-Data-Analysis",
-      tags: ["Operations", "CX Analytics", "Dashboards"],
-    },
-    {
-      title: "Pizza Sales Analysis",
-      desc: "Sales insights dashboard identifying revenue trends and product performance.",
-      icon: <Pizza size={28} />,
-      link: "https://github.com/kajalprajapati-art/Pizza-Sales-Analysis",
-      tags: ["Sales Analytics", "Retail BI", "Revenue"],
-    },
-  ];
+<p align="left">
+Analytical and detail-oriented <b>Data Analyst</b> with hands-on experience in building <b>Power BI dashboards</b> for business, HR, sales, and operational analytics.  
+Focused on transforming complex datasets into <b>clear, actionable insights</b> that support strategic decision-making.
+</p>
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 to-gray-900 text-white p-10">
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-4xl font-bold text-center mb-4"
-      >
-        Kajal Prajapati
-      </motion.h1>
-      <p className="text-center text-gray-400 mb-12">
-        Data Analyst • Power BI Developer • Business Intelligence
-      </p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Power%20BI-Analytics-F8FAFC?style=for-the-badge&logo=powerbi&logoColor=F2C811"/>
+  <img src="https://img.shields.io/badge/Data-Driven%20Insights-F8FAFC?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Business-Intelligence-EFF6FF?style=for-the-badge"/>
+</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        {projects.map((p, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-          >
-            <Card className="bg-gray-900 border-gray-800 hover:border-indigo-500 transition">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4 text-indigo-400">
-                  {p.icon}
-                  <h2 className="text-xl font-semibold">{p.title}</h2>
-                </div>
-                <p className="text-gray-400 mb-4">{p.desc}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {p.tags.map((t, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs bg-indigo-600/20 text-indigo-300 px-3 py-1 rounded-full"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={p.link}
-                  target="_blank"
-                  className="inline-flex items-center gap-2 text-sm text-indigo-400 hover:underline"
-                >
-                  <Github size={16} /> View Repository
-                </a>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-}
+---
+
+## Featured Projects
+
+<table>
+<tr>
+
+<td width="50%" valign="top">
+
+<div style="background: linear-gradient(90deg, #FFFFFF 0%, #F8FAFC 100%); padding: 16px; border-bottom: 3px solid #F59E0B;">
+
+### <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/chartdotjs.svg" width="16"/> <span style="color:#92400E;">Customer Retention Analysis</span>
+
+<a href="https://github.com/kajalprajapati-art/Customer-Rentention">
+  <img src="https://img.shields.io/badge/VIEW_PROJECT-FFFFFF?style=for-the-badge&logo=github&logoColor=92400E"/>
+</a>
+
+</div>
+
+<p align="center">
+
+Comprehensive <b>customer churn analysis dashboard</b> designed to identify high-risk customers, analyze behavioral patterns, and support retention-focused business strategies.
+
+`Power BI` • `DAX` • `Customer Analytics` • `KPI Dashboards`
+
+</p>
+
+</td>
+
+<td width="50%" valign="top">
+
+<div style="background: linear-gradient(90deg, #FFFFFF 0%, #F1F5F9 100%); padding: 16px; border-bottom: 3px solid #16A34A;">
+
+### <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/groupme.svg" width="16"/> <span style="color:#166534;">Diversity & Inclusion Dashboard</span>
+
+<a href="https://github.com/kajalprajapati-art/Diversity-and-inclusion-Dashboard">
+  <img src="https://img.shields.io/badge/VIEW_PROJECT-FFFFFF?style=for-the-badge&logo=github&logoColor=166534"/>
+</a>
+
+</div>
+
+<p align="center">
+
+Insight-driven <b>HR analytics dashboard</b> measuring workforce diversity, promotion trends, and leadership representation to support inclusive organizational planning.
+
+`Power BI` • `HR Analytics` • `People Analytics`
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+<div style="background: linear-gradient(90deg, #FFFFFF 0%, #F8FAFC 100%); padding: 16px; border-bottom: 3px solid #0284C7;">
+
+### <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zendesk.svg" width="16"/> <span style="color:#075985;">Call Centre Data Analysis</span>
+
+<a href="https://github.com/kajalprajapati-art/Call-Centre-Data-Analysis">
+  <img src="https://img.shields.io/badge/VIEW_PROJECT-FFFFFF?style=for-the-badge&logo=github&logoColor=075985"/>
+</a>
+
+</div>
+
+<p align="center">
+
+Operational performance analytics solution evaluating <b>agent productivity, call resolution efficiency, and customer satisfaction KPIs</b> to improve service outcomes.
+
+`Power BI` • `Excel` • `Operational Analytics`
+
+</p>
+
+</td>
+
+<td width="50%" valign="top">
+
+<div style="background: linear-gradient(90deg, #FFFFFF 0%, #F8FAFC 100%); padding: 16px; border-bottom: 3px solid #DC2626;">
+
+### <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg" width="16"/> <span style="color:#7F1D1D;">Pizza Sales Analysis</span>
+
+<a href="https://github.com/kajalprajapati-art/Pizza-Sales-Analysis">
+  <img src="https://img.shields.io/badge/VIEW_PROJECT-FFFFFF?style=for-the-badge&logo=github&logoColor=7F1D1D"/>
+</a>
+
+</div>
+
+<p align="center">
+
+End-to-end <b>sales performance dashboard</b> analyzing revenue trends, best-selling products, seasonal demand, and peak ordering hours to support data-driven growth.
+
+`Power BI` • `DAX` • `Sales Analytics`
+
+</p>
+
+</td>
+
+</tr>
+</table>
+
+---
+
+## Tech Stack & Tools
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=excel,python&theme=light"/>
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=000"/>
+</p>
+
+---
+
+<p align="center">
+<b>Data Analyst • Power BI Developer • Business Intelligence</b><br/>
+Focused on delivering structured insights for informed business decisions
+</p>
