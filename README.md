@@ -1,111 +1,89 @@
-# Hi 👋 I'm Kajal Prajapati  
-### 📊 Data Analyst | Power BI Specialist | Finance & Accounting Professional
+import { Card, CardContent } from "@/components/ui/card";
+import { Github, BarChart3, Users, Phone, Pizza } from "lucide-react";
+import { motion } from "framer-motion";
 
-Welcome to my GitHub profile repository!  
-I’m passionate about transforming business problems into insightful dashboards using data analytics and Power BI. My work showcases practical analytics projects spanning customer insights, diversity metrics, call center performance, and sales analysis.
+export default function Portfolio() {
+  const projects = [
+    {
+      title: "Customer Retention Analysis",
+      desc: "Interactive Power BI dashboard analyzing churn drivers and customer behavior.",
+      icon: <BarChart3 size={28} />,
+      link: "https://github.com/kajalprajapati-art/Customer-Rentention",
+      tags: ["Power BI", "DAX", "Churn Analysis", "KPIs"],
+    },
+    {
+      title: "Diversity & Inclusion Dashboard",
+      desc: "HR analytics dashboard measuring diversity, promotions, and workforce equity.",
+      icon: <Users size={28} />,
+      link: "https://github.com/kajalprajapati-art/Diversity-and-inclusion-Dashboard",
+      tags: ["HR Analytics", "Power BI", "People Analytics"],
+    },
+    {
+      title: "Call Centre Analytics",
+      desc: "Performance tracking of agents, calls, and customer satisfaction metrics.",
+      icon: <Phone size={28} />,
+      link: "https://github.com/kajalprajapati-art/Call-Centre-Data-Analysis",
+      tags: ["Operations", "CX Analytics", "Dashboards"],
+    },
+    {
+      title: "Pizza Sales Analysis",
+      desc: "Sales insights dashboard identifying revenue trends and product performance.",
+      icon: <Pizza size={28} />,
+      link: "https://github.com/kajalprajapati-art/Pizza-Sales-Analysis",
+      tags: ["Sales Analytics", "Retail BI", "Revenue"],
+    },
+  ];
 
----
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 to-gray-900 text-white p-10">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-4xl font-bold text-center mb-4"
+      >
+        Kajal Prajapati
+      </motion.h1>
+      <p className="text-center text-gray-400 mb-12">
+        Data Analyst • Power BI Developer • Business Intelligence
+      </p>
 
-## 🚀 About Me
-
-- 🎓 Commerce & Accounting background  
-- 📍 Based in India  
-- 📈 Aspiring Data Analyst / BI Professional  
-- 🛠️ Skilled in Power BI, DAX, Excel, Data Visualization & Analytics
-
----
-
-## 🧠 Skills & Technologies
-
-| Category | Tools & Technologies |
-|----------|----------------------|
-| Data Visualization | **Power BI Desktop**, DAX, Power Query |
-| Data Management | Excel (Advanced), Basic SQL |
-| Analytics | KPI tracking, segmentation, trend analysis |
-| Business Domain | Finance, Customer Analytics, HR Diversity Metrics |
-| Soft Skills | Analytical Thinking, Problem Solving |
-
----
-
-## 📂 Projects
-
-### 🔗 1. **Customer Retention Analysis Dashboard**
-📁 GitHub: https://github.com/kajalprajapati-art/Customer-Rentention
-
-**Description:**  
-A Power BI dashboard built to analyze customer churn, retention rates and identify factors affecting customer loyalty.
-
-**Key Features**
-- Customer churn vs retention insights
-- Retention rate trends and patterns
-- Segment-level behavior analysis
-
-**Technologies Used**
-- Power BI Desktop
-- DAX (Retention & churn measures)
-- Data cleaning using Power Query
-
----
-
-### 🔗 2. **Diversity & Inclusion Dashboard**
-📁 GitHub: https://github.com/kajalprajapati-art/Diversity-and-inclusion-Dashboard
-
-**Description:**  
-Interactive dashboard focused on workforce diversity and inclusion metrics across different departments and levels.
-
-**Key Features**
-- Gender diversity breakdowns
-- Hiring & promotion trends
-- Inclusion KPIs
-
-**Technologies Used**
-- Power BI Desktop
-- Conditional formatting & filter visuals
-- Interactive slicers for demographic selection
-
----
-
-### 🔗 3. **Call Centre Data Analysis**
-📁 GitHub: https://github.com/kajalprajapati-art/Call-Centre-Data-Analysis
-
-**Description:**  
-Analysis of call center operations to monitor performance metrics and identify patterns affecting service delivery.
-
-**Key Features**
-- Calls by hour/day/week
-- Average handling time insights
-- Performance dashboards by agent
-
-**Technologies Used**
-- Power BI Desktop
-- DAX for time aggregation
-- Report-level drilldowns
-
----
-
-### 🔗 4. **Pizza Sales Analysis Dashboard**
-📁 GitHub: https://github.com/kajalprajapati-art/Pizza-Sales-Analysis
-
-**Description:**  
-A sales analytics dashboard built to understand product performance, revenue patterns, and customer preference.
-
-**Key Features**
-- Total revenue, order count, average order value
-- Best & least selling items
-- Sales trend analysis
-
-**Technologies Used**
-- Power BI Desktop
-- Sales trend visuals
-- KPI cards and comparative metrics
-
----
-
-## 📊 Repository Structure
-
-```txt
-📁 Power-BI-Projects
- ├── Customer-Rentention
- ├── Diversity-and-inclusion-Dashboard
- ├── Call-Centre-Data-Analysis
- └── Pizza-Sales-Analysis
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {projects.map((p, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <Card className="bg-gray-900 border-gray-800 hover:border-indigo-500 transition">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-4 text-indigo-400">
+                  {p.icon}
+                  <h2 className="text-xl font-semibold">{p.title}</h2>
+                </div>
+                <p className="text-gray-400 mb-4">{p.desc}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {p.tags.map((t, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs bg-indigo-600/20 text-indigo-300 px-3 py-1 rounded-full"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href={p.link}
+                  target="_blank"
+                  className="inline-flex items-center gap-2 text-sm text-indigo-400 hover:underline"
+                >
+                  <Github size={16} /> View Repository
+                </a>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
